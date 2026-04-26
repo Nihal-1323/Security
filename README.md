@@ -39,37 +39,49 @@ A complete web-based parking management system with user registration, real-time
 ### Installation (5 Minutes)
 
 1. **Install XAMPP**
-   ```
-   Download from: https://www.apachefriends.org/
-   Install to: C:\xampp
-   ```
+   - Download from: https://www.apachefriends.org/
+   - Install to: `C:\xampp` (default location)
 
-2. **Clone or Download**
-   ```bash
-   git clone https://github.com/Nihal-1323/Security.git
-   cd Security
-   ```
+2. **Download This Project**
+   - Click the green "Code" button above
+   - Click "Download ZIP"
+   - Extract the ZIP file
 
 3. **Copy to XAMPP**
-   ```
-   Copy the 'smart-parking-system' folder to: C:\xampp\htdocs\
-   ```
+   - Find the `smart-parking-system` folder in the extracted files
+   - Copy it to: `C:\xampp\htdocs\`
+   - Final path: `C:\xampp\htdocs\smart-parking-system\`
 
-4. **Start Services**
+4. **Start XAMPP Services**
    - Open XAMPP Control Panel
-   - Start Apache
-   - Start MySQL
+   - Click "Start" for Apache (wait for GREEN)
+   - Click "Start" for MySQL (wait for GREEN)
 
-5. **Run Setup**
-   ```
-   Go to: C:\xampp\htdocs\smart-parking-system\
-   Double-click: setup.bat
-   ```
+5. **Run Automated Setup**
+   - Go to: `C:\xampp\htdocs\smart-parking-system\`
+   - Double-click: `setup.bat`
+   - Wait for "Setup completed successfully!"
+   - This creates the database and adds 14 parking slots
 
-6. **Open Browser**
+6. **Open in Browser**
    ```
    http://localhost/smart-parking-system/
    ```
+
+### Verify Installation
+
+Open this URL to verify everything is working:
+```
+http://localhost/smart-parking-system/test-connection.php
+```
+
+You should see:
+- ✓ Database connection successful
+- ✓ All 5 tables exist
+- ✓ parking_slots: 14 rows
+- ✓ Admin user found
+
+If parking_slots shows 0 rows, run `setup.bat` again.
 
 ## 📖 Documentation
 
