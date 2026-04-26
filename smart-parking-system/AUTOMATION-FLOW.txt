@@ -1,0 +1,234 @@
+╔══════════════════════════════════════════════════════════════════════╗
+║           SMART PARKING SYSTEM - AUTOMATION FLOW                     ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+                         START INSTALLATION
+                                 │
+                                 ▼
+                    ┌────────────────────────┐
+                    │  Choose Setup Method   │
+                    └────────────────────────┘
+                                 │
+                 ┌───────────────┼───────────────┐
+                 │               │               │
+                 ▼               ▼               ▼
+         ┌──────────┐    ┌──────────┐    ┌──────────┐
+         │setup.bat │    │setup.py  │    │setup.sh  │
+         │(Windows) │    │(Python)  │    │(Linux/Mac)│
+         └──────────┘    └──────────┘    └──────────┘
+                 │               │               │
+                 └───────────────┼───────────────┘
+                                 │
+                                 ▼
+                    ┌────────────────────────┐
+                    │ Detect Web Server      │
+                    │ • XAMPP                │
+                    │ • WAMP                 │
+                    │ • Apache               │
+                    └────────────────────────┘
+                                 │
+                                 ▼
+                    ┌────────────────────────┐
+                    │ Copy Project Files     │
+                    │ → web_root/            │
+                    │   smart-parking-system/│
+                    └────────────────────────┘
+                                 │
+                                 ▼
+                    ┌────────────────────────┐
+                    │ Check MySQL Connection │
+                    └────────────────────────┘
+                                 │
+                    ┌────────────┴────────────┐
+                    │                         │
+                    ▼                         ▼
+            ┌──────────────┐         ┌──────────────┐
+            │  Connected   │         │ Not Connected│
+            └──────────────┘         └──────────────┘
+                    │                         │
+                    ▼                         ▼
+        ┌────────────────────┐    ┌────────────────────┐
+        │ Create Database    │    │ Show Manual        │
+        │ • smart_parking_db │    │ Instructions       │
+        │ • Import schema    │    └────────────────────┘
+        │ • Add default data │
+        └────────────────────┘
+                    │
+                    ▼
+        ┌────────────────────────┐
+        │ Verify Installation    │
+        │ • Check tables         │
+        │ • Verify admin user    │
+        │ • Count parking slots  │
+        └────────────────────────┘
+                    │
+                    ▼
+        ┌────────────────────────┐
+        │ Start Services         │
+        │ • Open Control Panel   │
+        │ • Start Apache/MySQL   │
+        └────────────────────────┘
+                    │
+                    ▼
+        ┌────────────────────────┐
+        │ Open Test Page         │
+        │ test-connection.php    │
+        └────────────────────────┘
+                    │
+                    ▼
+        ┌────────────────────────┐
+        │ Display Summary        │
+        │ • Access URLs          │
+        │ • Admin credentials    │
+        │ • Next steps           │
+        └────────────────────────┘
+                    │
+                    ▼
+                INSTALLATION COMPLETE!
+
+
+═══════════════════════════════════════════════════════════════════════
+
+SCRIPT FEATURES COMPARISON
+═══════════════════════════════════════════════════════════════════════
+
+Feature                    setup.py    setup.bat    setup.sh
+─────────────────────────────────────────────────────────────────────
+Cross-platform                ✓            ✗            ✗
+No dependencies               ✗            ✓            ✓
+Colored output                ✓            ✗            ✓
+Auto MySQL setup              ✓            ✗            ✓
+Service management            ✓            ✓            ✓
+Browser auto-open             ✓            ✓            ✓
+Error handling                ✓✓           ✓            ✓
+Progress indicators           ✓            ✗            ✓
+Database verification         ✓            ✗            ✗
+
+Recommended:                  ✓✓✓          ✓✓           ✓✓
+
+═══════════════════════════════════════════════════════════════════════
+
+INSTALLATION PATHS
+═══════════════════════════════════════════════════════════════════════
+
+Windows (XAMPP):
+  Source: C:\path\to\smart-parking-system\
+  Target: C:\xampp\htdocs\smart-parking-system\
+
+Windows (WAMP):
+  Source: C:\path\to\smart-parking-system\
+  Target: C:\wamp64\www\smart-parking-system\
+
+Linux (Apache):
+  Source: /path/to/smart-parking-system/
+  Target: /var/www/html/smart-parking-system/
+
+Linux (XAMPP):
+  Source: /path/to/smart-parking-system/
+  Target: /opt/lampp/htdocs/smart-parking-system/
+
+macOS (XAMPP):
+  Source: /path/to/smart-parking-system/
+  Target: /Applications/XAMPP/htdocs/smart-parking-system/
+
+═══════════════════════════════════════════════════════════════════════
+
+DATABASE SETUP FLOW
+═══════════════════════════════════════════════════════════════════════
+
+1. Connect to MySQL (root, no password)
+   │
+   ▼
+2. CREATE DATABASE smart_parking_db
+   │
+   ▼
+3. USE smart_parking_db
+   │
+   ▼
+4. Create Tables:
+   ├─ users (with admin account)
+   ├─ parking_slots (14 slots)
+   ├─ bookings
+   ├─ payments
+   └─ activity_logs
+   │
+   ▼
+5. Insert Default Data:
+   ├─ Admin user (admin/Admin@2026)
+   └─ Parking slots (A1-D2)
+   │
+   ▼
+6. Verify:
+   ├─ Count tables (5)
+   ├─ Check admin user
+   └─ Count slots (14)
+
+═══════════════════════════════════════════════════════════════════════
+
+ERROR HANDLING
+═══════════════════════════════════════════════════════════════════════
+
+Web Server Not Found:
+  → Show installation instructions
+  → Provide download links
+  → Exit gracefully
+
+MySQL Not Running:
+  → Show service start instructions
+  → Provide manual import steps
+  → Continue with file copy
+
+Permission Denied:
+  → Suggest running as admin/sudo
+  → Show manual copy commands
+  → Provide alternative paths
+
+Database Import Failed:
+  → Show phpMyAdmin instructions
+  → Provide command line alternative
+  → Continue with setup
+
+═══════════════════════════════════════════════════════════════════════
+
+POST-INSTALLATION VERIFICATION
+═══════════════════════════════════════════════════════════════════════
+
+Automated Checks:
+  ✓ Files copied successfully
+  ✓ Database created
+  ✓ Tables exist (5)
+  ✓ Admin user created
+  ✓ Parking slots added (14)
+  ✓ Web server accessible
+
+Manual Verification:
+  1. Visit test-connection.php
+  2. Check all green checkmarks
+  3. Try logging in
+  4. View parking slots
+  5. Test booking system
+
+═══════════════════════════════════════════════════════════════════════
+
+ROLLBACK (if needed)
+═══════════════════════════════════════════════════════════════════════
+
+To remove installation:
+
+1. Delete files:
+   Windows: rmdir /s C:\xampp\htdocs\smart-parking-system
+   Linux:   rm -rf /var/www/html/smart-parking-system
+
+2. Drop database:
+   mysql -u root -e "DROP DATABASE smart_parking_db"
+
+3. Restart services if needed
+
+═══════════════════════════════════════════════════════════════════════
+
+For detailed documentation, see:
+• AUTOMATION.md - Complete automation guide
+• QUICKSTART.txt - Quick reference
+• SETUP.md - Manual installation
+
+═══════════════════════════════════════════════════════════════════════

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard - Smart Parking</title>
+<link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2>🚗 Smart Parking</h2>
+        </div>
+        <nav class="sidebar-nav" id="sidebarNav">
+            <!-- Navigation will be loaded based on user role -->
+        </nav>
+        <div class="sidebar-footer">
+            <button onclick="logout()" class="btn-logout">Logout</button>
+        </div>
+    </aside>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="dashboard-header">
+            <h1 id="welcomeMessage">Welcome</h1>
+            <div class="user-info" id="userInfo"></div>
+        </header>
+        
+        <div class="dashboard-content" id="dashboardContent">
+            <!-- Content will be loaded dynamically -->
+        </div>
+    </main>
+</div>
+
+<script src="js/dashboard-mysql.js"></script>
+</body>
+</html>

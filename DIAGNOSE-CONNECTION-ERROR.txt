@@ -1,0 +1,156 @@
+╔══════════════════════════════════════════════════════════════════╗
+║     DIAGNOSE CONNECTION ERROR - QUICK START GUIDE                ║
+╚══════════════════════════════════════════════════════════════════╝
+
+PROBLEM: Registration page shows "Connection error"
+
+SOLUTION: Follow these steps in order
+
+═══════════════════════════════════════════════════════════════════
+
+STEP 1: CHECK PHP CONFIGURATION
+═══════════════════════════════════════════════════════════════════
+Open in browser:
+→ http://localhost/smart-parking-system/check-php-config.php
+
+Look for:
+✓ All green checkmarks = GOOD
+✗ Any red X marks = PROBLEM (note which ones)
+
+═══════════════════════════════════════════════════════════════════
+
+STEP 2: TEST REGISTRATION DIRECTLY
+═══════════════════════════════════════════════════════════════════
+Open in browser:
+→ http://localhost/smart-parking-system/test-register-direct.php
+
+1. Check if all tests pass (green checkmarks)
+2. Click "Test Registration API" button
+3. Check the result box below the button
+
+If you see: {"success":true,"message":"Registration successful"}
+→ API is working! Problem is in the frontend.
+
+If you see an error:
+→ Note the error message and continue to Step 3
+
+═══════════════════════════════════════════════════════════════════
+
+STEP 3: CHECK BROWSER CONSOLE
+═══════════════════════════════════════════════════════════════════
+1. Open: http://localhost/smart-parking-system/register.html
+2. Press F12 (opens Developer Tools)
+3. Click "Console" tab
+4. Fill in registration form and click "Create Account"
+5. Look for RED error messages in console
+
+Common errors:
+• "Failed to fetch" = Apache not running or wrong URL
+• "Unexpected token" = PHP error in response
+• "CORS error" = Cross-origin issue (shouldn't happen on localhost)
+• "404 Not Found" = File path is wrong
+
+═══════════════════════════════════════════════════════════════════
+
+STEP 4: CHECK NETWORK TAB
+═══════════════════════════════════════════════════════════════════
+1. In Developer Tools (F12), click "Network" tab
+2. Try to register again
+3. Click on "auth.php" in the list
+4. Click "Response" tab
+5. Check what the server returned
+
+Expected: {"success":true,"message":"Registration successful"}
+If you see HTML or PHP error: There's a PHP error
+
+═══════════════════════════════════════════════════════════════════
+
+QUICK FIXES TO TRY
+═══════════════════════════════════════════════════════════════════
+
+FIX 1: Restart Apache
+─────────────────────
+1. Open XAMPP Control Panel
+2. Click "Stop" for Apache
+3. Wait 3 seconds
+4. Click "Start" for Apache
+5. Try registration again
+
+FIX 2: Clear Browser Cache
+───────────────────────────
+1. Press Ctrl + Shift + Delete
+2. Check "Cached images and files"
+3. Click "Clear data"
+4. Press Ctrl + F5 to hard refresh
+5. Try registration again
+
+FIX 3: Check File Location
+───────────────────────────
+Files must be at:
+C:\xampp\htdocs\smart-parking-system\
+
+Check these files exist:
+✓ register.html
+✓ api\auth.php
+✓ config\database.php
+✓ js\auth.js
+
+FIX 4: Test with Simple API Call
+─────────────────────────────────
+Open: http://localhost/smart-parking-system/test-api.html
+Click "Test Register" button
+Check the result
+
+═══════════════════════════════════════════════════════════════════
+
+STILL NOT WORKING?
+═══════════════════════════════════════════════════════════════════
+
+Check Apache Error Log:
+→ C:\xampp\apache\logs\error.log
+
+Look for recent errors (check timestamp)
+Common issues:
+• "Call to undefined function" = Missing PHP extension
+• "Permission denied" = File permission issue
+• "Failed to open stream" = File not found
+
+═══════════════════════════════════════════════════════════════════
+
+MANUAL API TEST (Advanced)
+═══════════════════════════════════════════════════════════════════
+
+Open Command Prompt and run:
+
+curl -X POST http://localhost/smart-parking-system/api/auth.php?action=register -H "Content-Type: application/json" -d "{\"fullname\":\"Test User\",\"email\":\"test@test.com\",\"phone\":\"1234567890\",\"username\":\"testuser\",\"password\":\"test123\",\"role\":\"user\"}"
+
+This will show the exact API response.
+
+═══════════════════════════════════════════════════════════════════
+
+WHAT TO REPORT IF STILL STUCK
+═══════════════════════════════════════════════════════════════════
+
+1. Result from check-php-config.php (any red X marks?)
+2. Result from test-register-direct.php (what error?)
+3. Browser console error message (exact text)
+4. Network tab response (what did server return?)
+5. Apache error log (last few lines)
+
+═══════════════════════════════════════════════════════════════════
+
+MOST LIKELY CAUSES
+═══════════════════════════════════════════════════════════════════
+
+1. Apache not running → Start it in XAMPP
+2. Wrong file path → Check files are in C:\xampp\htdocs\smart-parking-system\
+3. PHP session error → Check session.save_path in php.ini
+4. Database not imported → Run import-database.bat
+5. Browser cache → Clear cache and hard refresh (Ctrl+F5)
+
+═══════════════════════════════════════════════════════════════════
+
+For detailed troubleshooting guide, see:
+→ smart-parking-system/FIX-CONNECTION-ERROR.md
+
+═══════════════════════════════════════════════════════════════════

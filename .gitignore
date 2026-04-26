@@ -1,0 +1,20 @@
+# ZIP files (optional - remove if you want to include them)
+*.zip
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store

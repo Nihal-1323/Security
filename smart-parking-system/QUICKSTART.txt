@@ -1,0 +1,127 @@
+╔══════════════════════════════════════════════════════════════╗
+║     SMART PARKING SYSTEM - QUICK START GUIDE                 ║
+╚══════════════════════════════════════════════════════════════╝
+
+🚀 FASTEST WAY TO INSTALL
+═══════════════════════════════════════════════════════════════
+
+WINDOWS USERS:
+--------------
+1. Double-click: setup.bat
+   OR
+   Run in Command Prompt: python setup.py
+
+LINUX/MAC USERS:
+----------------
+1. Open Terminal in this folder
+2. Run: chmod +x setup.sh && ./setup.sh
+   OR
+   Run: python3 setup.py
+
+═══════════════════════════════════════════════════════════════
+
+📋 WHAT YOU NEED BEFORE STARTING
+═══════════════════════════════════════════════════════════════
+
+✓ XAMPP or WAMP installed
+✓ Apache and MySQL running (green in control panel)
+✓ Python 3.6+ (optional, but recommended)
+
+Don't have XAMPP? Download here:
+→ https://www.apachefriends.org/
+
+═══════════════════════════════════════════════════════════════
+
+🎯 WHAT THE SCRIPT DOES
+═══════════════════════════════════════════════════════════════
+
+1. Finds your XAMPP/WAMP installation
+2. Copies all files to web root
+3. Creates database and imports schema
+4. Opens test page in browser
+5. Shows you the access URLs
+
+═══════════════════════════════════════════════════════════════
+
+🔑 DEFAULT LOGIN CREDENTIALS
+═══════════════════════════════════════════════════════════════
+
+Username: admin
+Password: Admin@2026
+Role:     Administrator
+
+⚠️  IMPORTANT: Change password after first login!
+
+═══════════════════════════════════════════════════════════════
+
+🌐 ACCESS URLS (after installation)
+═══════════════════════════════════════════════════════════════
+
+Test Connection:
+→ http://localhost/smart-parking-system/test-connection.php
+
+Homepage:
+→ http://localhost/smart-parking-system/index.html
+
+Login Page:
+→ http://localhost/smart-parking-system/login.html
+
+═══════════════════════════════════════════════════════════════
+
+❌ TROUBLESHOOTING
+═══════════════════════════════════════════════════════════════
+
+Problem: Script can't find XAMPP/WAMP
+Solution: Install XAMPP or manually copy files to:
+          C:\xampp\htdocs\smart-parking-system (Windows)
+          /var/www/html/smart-parking-system (Linux)
+
+Problem: Database connection failed
+Solution: 1. Start MySQL in XAMPP/WAMP Control Panel
+          2. Open phpMyAdmin: http://localhost/phpmyadmin
+          3. Import: database/schema.sql
+
+Problem: Permission denied
+Solution: Windows - Run as Administrator
+          Linux/Mac - Use: sudo ./setup.sh
+
+Problem: Browser doesn't open
+Solution: Manually open the test connection URL above
+
+═══════════════════════════════════════════════════════════════
+
+📚 DETAILED DOCUMENTATION
+═══════════════════════════════════════════════════════════════
+
+For detailed instructions, see:
+• AUTOMATION.md - Complete automation guide
+• SETUP.md - Manual installation steps
+• README.md - Project overview
+
+═══════════════════════════════════════════════════════════════
+
+💡 QUICK TIPS
+═══════════════════════════════════════════════════════════════
+
+1. Make sure Apache and MySQL are RUNNING before setup
+2. Use Python script for best experience
+3. Check test-connection.php to verify everything works
+4. Change admin password immediately after login
+5. Read SETUP.md if you encounter any issues
+
+═══════════════════════════════════════════════════════════════
+
+🎉 READY TO START?
+═══════════════════════════════════════════════════════════════
+
+Windows: Double-click setup.bat
+Linux/Mac: Run ./setup.sh in terminal
+
+That's it! The script handles everything else.
+
+═══════════════════════════════════════════════════════════════
+
+Need help? Check the documentation files or run:
+→ http://localhost/smart-parking-system/test-connection.php
+
+Happy parking! 🚗

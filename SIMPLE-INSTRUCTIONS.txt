@@ -1,0 +1,104 @@
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║     🚗 SMART PARKING SYSTEM - SIMPLE INSTRUCTIONS 🚗             ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+
+
+FOR YOUR FRIEND - SUPER SIMPLE STEPS
+═══════════════════════════════════════════════════════════════════
+
+
+STEP 1: Install XAMPP
+──────────────────────────────────────────────────────────────────
+Download: https://www.apachefriends.org/
+Click "Download" → Choose Windows version → Install
+
+
+STEP 2: Extract ZIP
+──────────────────────────────────────────────────────────────────
+Extract the ZIP file to: C:\xampp\htdocs\
+
+You should have: C:\xampp\htdocs\smart-parking-system\
+
+
+STEP 3: Start Services
+──────────────────────────────────────────────────────────────────
+1. Search "XAMPP" in Windows Start menu
+2. Open "XAMPP Control Panel"
+3. Click "Start" next to Apache (should turn green)
+4. Click "Start" next to MySQL (should turn green)
+
+
+STEP 4: Run Setup
+──────────────────────────────────────────────────────────────────
+1. Open folder: C:\xampp\htdocs\smart-parking-system\
+2. Find file: setup.bat
+3. Double-click it
+4. Wait for "Setup completed successfully!"
+5. Press any key to close
+
+
+STEP 5: Open Website
+──────────────────────────────────────────────────────────────────
+Open your browser (Chrome, Firefox, Edge)
+Type: http://localhost/smart-parking-system/
+Press Enter
+
+You should see the Smart Parking System homepage! 🎉
+
+
+═══════════════════════════════════════════════════════════════════
+
+NOW WHAT?
+═══════════════════════════════════════════════════════════════════
+
+1. Click "Get Started" or "Register"
+2. Fill in your details
+3. Create an account
+4. Login and start using the system!
+
+
+═══════════════════════════════════════════════════════════════════
+
+TEST ADMIN ACCOUNT
+═══════════════════════════════════════════════════════════════════
+
+Want to see admin features?
+
+Username: admin
+Password: Admin@2026
+Role: Admin
+
+(Change this password after first login!)
+
+
+═══════════════════════════════════════════════════════════════════
+
+PROBLEMS?
+═══════════════════════════════════════════════════════════════════
+
+Website not loading?
+→ Make sure Apache is green in XAMPP Control Panel
+
+Connection error?
+→ Make sure MySQL is green in XAMPP Control Panel
+→ Run setup.bat again
+
+Database error?
+→ Go to smart-parking-system folder
+→ Double-click: import-database.bat
+
+Still stuck?
+→ Read: HOW-TO-RUN.txt (in smart-parking-system folder)
+
+
+═══════════════════════════════════════════════════════════════════
+
+THAT'S IT!
+═══════════════════════════════════════════════════════════════════
+
+5 simple steps and you're done. Enjoy! 🚗💨
+
+
+═══════════════════════════════════════════════════════════════════

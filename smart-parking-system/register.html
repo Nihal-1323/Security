@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register - Smart Parking</title>
+<link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+<div class="auth-container">
+    <div class="auth-box">
+        <div class="logo">🚗</div>
+        <h2>Create Account</h2>
+        <p class="subtitle">Join our smart parking community</p>
+        
+        <form id="registerForm">
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="role">Register As</label>
+                <select id="role" name="role" required>
+                    <option value="">Select Role</option>
+                    <option value="user">User</option>
+                    <option value="security">Security Staff</option>
+                </select>
+            </div>
+            
+            <div id="message" class="message"></div>
+            
+            <button type="submit" class="btn-primary">Create Account</button>
+        </form>
+        
+        <p class="switch-auth">
+            Already have an account? <a href="login.html">Login here</a>
+        </p>
+        
+        <a href="index.html" class="back-link">← Back to Home</a>
+    </div>
+</div>
+
+<script src="js/auth.js"></script>
+</body>
+</html>

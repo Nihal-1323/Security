@@ -1,0 +1,105 @@
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║     FIX REGISTRATION CONNECTION ERROR                            ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+
+
+QUICK START - 3 SIMPLE STEPS
+═══════════════════════════════════════════════════════════════════
+
+STEP 1: Make sure XAMPP is running
+───────────────────────────────────
+✓ Open XAMPP Control Panel
+✓ Apache should be GREEN (running)
+✓ MySQL should be GREEN (running)
+
+If not green, click "Start" for each.
+
+
+STEP 2: Run the diagnostic tool
+────────────────────────────────
+Double-click this file:
+→ smart-parking-system\diagnose-connection.bat
+
+This will open 3 browser tabs with diagnostic tests.
+
+
+STEP 3: Check the results
+──────────────────────────
+Tab 1: PHP Configuration Check
+   → All items should show ✓ (green checkmarks)
+   → If you see ✗ (red X), note which ones
+
+Tab 2: Direct Registration Test
+   → Click "Test Registration API" button
+   → Should show: {"success":true,"message":"Registration successful"}
+
+Tab 3: API Test Page
+   → Click "Test Register" button
+   → Should show success message
+
+
+═══════════════════════════════════════════════════════════════════
+
+IF ALL TESTS PASS BUT REGISTRATION STILL FAILS
+═══════════════════════════════════════════════════════════════════
+
+1. Open: http://localhost/smart-parking-system/register.html
+2. Press F12 (opens Developer Tools)
+3. Click "Console" tab
+4. Fill in registration form
+5. Click "Create Account"
+6. Look at console messages
+
+You should see:
+✓ "Sending registration request:"
+✓ "Response status: 200"
+✓ "Response text: {"success":true,...}"
+✓ "Parsed response:"
+
+If you see errors in red, that's the problem!
+
+
+═══════════════════════════════════════════════════════════════════
+
+COMMON FIXES
+═══════════════════════════════════════════════════════════════════
+
+FIX 1: Restart Apache
+   1. XAMPP Control Panel
+   2. Stop Apache
+   3. Start Apache
+
+FIX 2: Clear Browser Cache
+   1. Press Ctrl + Shift + Delete
+   2. Clear "Cached images and files"
+   3. Press Ctrl + F5 to refresh
+
+FIX 3: Check File Location
+   Files must be in: C:\xampp\htdocs\smart-parking-system\
+
+
+═══════════════════════════════════════════════════════════════════
+
+NEED MORE HELP?
+═══════════════════════════════════════════════════════════════════
+
+Read these files:
+• CONNECTION-ERROR-FIXED.txt - What was changed
+• DIAGNOSE-CONNECTION-ERROR.txt - Detailed diagnostic steps
+• FIX-CONNECTION-ERROR.md - Complete troubleshooting guide
+
+
+═══════════════════════════════════════════════════════════════════
+
+WHAT WAS IMPROVED
+═══════════════════════════════════════════════════════════════════
+
+✓ Better error handling in API
+✓ Detailed console logging
+✓ Diagnostic tools created
+✓ Troubleshooting guides added
+
+
+═══════════════════════════════════════════════════════════════════

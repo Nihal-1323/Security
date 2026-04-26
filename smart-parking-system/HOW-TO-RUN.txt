@@ -1,0 +1,252 @@
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║     SMART PARKING SYSTEM - HOW TO RUN                            ║
+║     (Instructions for your friend)                               ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+
+
+REQUIREMENTS
+═══════════════════════════════════════════════════════════════════
+✓ Windows PC
+✓ XAMPP (free download from: https://www.apachefriends.org/)
+
+
+INSTALLATION STEPS
+═══════════════════════════════════════════════════════════════════
+
+STEP 1: Install XAMPP
+──────────────────────
+1. Download XAMPP from: https://www.apachefriends.org/
+2. Run the installer
+3. Install to default location: C:\xampp
+4. Complete the installation
+
+
+STEP 2: Extract the ZIP file
+─────────────────────────────
+1. Extract the ZIP file you received
+2. Copy the "smart-parking-system" folder
+3. Paste it into: C:\xampp\htdocs\
+4. Final path should be: C:\xampp\htdocs\smart-parking-system\
+
+
+STEP 3: Start XAMPP Services
+─────────────────────────────
+1. Open XAMPP Control Panel (search in Windows Start menu)
+2. Click "Start" for Apache
+3. Click "Start" for MySQL
+4. Both should turn GREEN
+
+
+STEP 4: Import Database (AUTOMATIC)
+────────────────────────────────────
+1. Go to: C:\xampp\htdocs\smart-parking-system\
+2. Double-click: setup.bat
+3. Wait for it to complete
+4. Press any key to close
+
+OR (if setup.bat doesn't work):
+
+1. Go to: C:\xampp\htdocs\smart-parking-system\
+2. Double-click: import-database.bat
+3. Wait for "Database imported successfully!"
+4. Press any key to close
+
+
+STEP 5: Open the Website
+─────────────────────────
+Open your browser and go to:
+→ http://localhost/smart-parking-system/
+
+You should see the Smart Parking System homepage!
+
+
+═══════════════════════════════════════════════════════════════════
+
+QUICK START GUIDE
+═══════════════════════════════════════════════════════════════════
+
+1. REGISTER A NEW ACCOUNT
+   ────────────────────────
+   • Click "Get Started" or "Register"
+   • Fill in your details
+   • Choose role: User (for parking) or Security (for staff)
+   • Click "Create Account"
+
+2. LOGIN
+   ──────
+   • Use your username and password
+   • Select your role
+   • Click "Login"
+
+3. USE THE SYSTEM
+   ──────────────
+   • Users: Book parking slots, view bookings, make payments
+   • Security: Check in/out vehicles, view all bookings
+   • Admin: Manage everything (username: admin, password: Admin@2026)
+
+
+═══════════════════════════════════════════════════════════════════
+
+DEFAULT ADMIN ACCOUNT (For Testing)
+═══════════════════════════════════════════════════════════════════
+Username: admin
+Password: Admin@2026
+Role: Admin
+
+⚠ IMPORTANT: Change this password after first login!
+
+
+═══════════════════════════════════════════════════════════════════
+
+TROUBLESHOOTING
+═══════════════════════════════════════════════════════════════════
+
+PROBLEM: "Site can't be reached"
+─────────────────────────────────
+✓ Check XAMPP Control Panel - Apache should be GREEN
+✓ If not green, click "Start" for Apache
+✓ Try again: http://localhost/smart-parking-system/
+
+
+PROBLEM: "Connection error" when registering
+─────────────────────────────────────────────
+✓ Check XAMPP Control Panel - MySQL should be GREEN
+✓ If not green, click "Start" for MySQL
+✓ Run: import-database.bat (in smart-parking-system folder)
+✓ Try again
+
+
+PROBLEM: "Table doesn't exist" error
+─────────────────────────────────────
+✓ Database not imported yet
+✓ Run: import-database.bat
+✓ Wait for "Database imported successfully!"
+✓ Try again
+
+
+PROBLEM: MySQL won't start (red in XAMPP)
+──────────────────────────────────────────
+✓ Run: diagnose-mysql.bat (in smart-parking-system folder)
+✓ Follow the instructions shown
+✓ OR run: fix-mysql.bat
+
+
+═══════════════════════════════════════════════════════════════════
+
+TESTING THE SYSTEM
+═══════════════════════════════════════════════════════════════════
+
+1. Test Database Connection
+   ─────────────────────────
+   Open: http://localhost/smart-parking-system/test-connection.php
+   All items should show ✓ (green checkmarks)
+
+2. Test Registration
+   ──────────────────
+   • Go to: http://localhost/smart-parking-system/register.html
+   • Create a test account
+   • Should redirect to login page
+
+3. Test Login
+   ──────────
+   • Login with your test account
+   • Should redirect to dashboard
+   • Dashboard should show parking slots
+
+
+═══════════════════════════════════════════════════════════════════
+
+FEATURES
+═══════════════════════════════════════════════════════════════════
+
+FOR USERS:
+──────────
+✓ Register and login
+✓ View available parking slots
+✓ Book parking slots
+✓ View booking history
+✓ Make payments
+✓ Extend booking time
+
+FOR SECURITY STAFF:
+───────────────────
+✓ Check in vehicles
+✓ Check out vehicles
+✓ View all active bookings
+✓ Search by vehicle number
+✓ View activity logs
+
+FOR ADMIN:
+──────────
+✓ Manage all users
+✓ Manage parking slots
+✓ View all bookings
+✓ View all payments
+✓ View activity logs
+✓ Generate reports
+
+
+═══════════════════════════════════════════════════════════════════
+
+SYSTEM DETAILS
+═══════════════════════════════════════════════════════════════════
+
+Database: smart_parking_db
+Tables: 5 (users, parking_slots, bookings, payments, activity_logs)
+Parking Slots: 14 (A1-A4, B1-B4, C1-C3, D1-D3)
+Default Admin: admin / Admin@2026
+
+
+═══════════════════════════════════════════════════════════════════
+
+HELPFUL BATCH FILES
+═══════════════════════════════════════════════════════════════════
+
+setup.bat
+   → Complete setup (copies files + imports database)
+
+import-database.bat
+   → Import database only
+
+start-mysql.bat
+   → Start MySQL service
+
+diagnose-mysql.bat
+   → Diagnose MySQL issues
+
+fix-mysql.bat
+   → Fix common MySQL problems
+
+test-connection.php
+   → Test database connection
+
+
+═══════════════════════════════════════════════════════════════════
+
+NEED MORE HELP?
+═══════════════════════════════════════════════════════════════════
+
+Check these files in the smart-parking-system folder:
+• QUICKSTART.txt - Quick start guide
+• SETUP.md - Detailed setup instructions
+• TROUBLESHOOTING.md - Common problems and solutions
+• DOCUMENTATION-INDEX.md - All documentation files
+
+
+═══════════════════════════════════════════════════════════════════
+
+SUMMARY - 5 SIMPLE STEPS
+═══════════════════════════════════════════════════════════════════
+
+1. Install XAMPP
+2. Extract ZIP to C:\xampp\htdocs\
+3. Start Apache and MySQL in XAMPP
+4. Run setup.bat
+5. Open http://localhost/smart-parking-system/
+
+That's it! 🚗
+
+
+═══════════════════════════════════════════════════════════════════
