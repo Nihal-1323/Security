@@ -52,17 +52,26 @@ Both should be GREEN now!
 
 STEP 5: Run Setup
 ──────────────────────────────────────────────────────────────────
-1. Open folder: C:\xampp\htdocs\smart-parking-system\
-2. Find file: setup.bat
-3. Double-click it
-4. Wait for "Setup completed successfully!"
-5. Press any key to close
+IMPORTANT: Stop Apache first!
+
+1. In XAMPP Control Panel, click "Stop" for Apache
+2. Wait 3 seconds (MySQL should still be running/GREEN)
+3. Go to: C:\xampp\htdocs\smart-parking-system\
+4. Find file: setup-fixed.bat
+5. Double-click it
+6. Wait for "Setup completed successfully!"
+7. Apache will start automatically
+8. Press any key to close
 
 This will:
 ✓ Create the database
 ✓ Create all tables
 ✓ Add 14 parking slots (A1-D3)
 ✓ Add admin user
+
+If you see "file is being used" error:
+→ You forgot to stop Apache first
+→ Stop Apache and try again
 
 
 STEP 6: Open Website
@@ -125,6 +134,13 @@ PROBLEM: Connection error
 ✓ MySQL should be GREEN
 ✓ If not, click "Start" for MySQL
 ✓ Run setup.bat again
+
+
+PROBLEM: "File is being used by another process"
+─────────────────────────────────────────────────
+✓ Stop Apache in XAMPP Control Panel
+✓ Run setup-fixed.bat (not setup.bat)
+✓ Apache will start automatically after setup
 
 
 PROBLEM: No parking slots showing

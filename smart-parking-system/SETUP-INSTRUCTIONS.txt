@@ -1,0 +1,127 @@
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║     SETUP INSTRUCTIONS - READ THIS FIRST!                        ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+
+
+IMPORTANT: STOP APACHE BEFORE RUNNING SETUP
+═══════════════════════════════════════════════════════════════════
+
+If you see error: "The process cannot access the file because it is
+being used by another process"
+
+This means Apache is running and using the files.
+
+
+SOLUTION - OPTION 1 (Recommended)
+═══════════════════════════════════════════════════════════════════
+
+Use the fixed setup script:
+
+1. Open XAMPP Control Panel
+2. Click "Stop" for Apache (if it's running)
+3. Wait 3 seconds
+4. Go to: C:\xampp\htdocs\smart-parking-system\
+5. Double-click: setup-fixed.bat
+6. Wait for completion
+7. Apache will start automatically
+
+This script stops Apache, imports database, then starts Apache again.
+
+
+SOLUTION - OPTION 2 (Manual)
+═══════════════════════════════════════════════════════════════════
+
+1. Open XAMPP Control Panel
+2. Stop Apache (click "Stop" button)
+3. Keep MySQL running (should be GREEN)
+4. Run: import-database.bat
+5. Start Apache again (click "Start" button)
+
+
+SOLUTION - OPTION 3 (Fresh Install)
+═══════════════════════════════════════════════════════════════════
+
+If files are already in C:\xampp\htdocs\smart-parking-system\:
+
+1. Stop Apache in XAMPP
+2. Delete the folder: C:\xampp\htdocs\smart-parking-system\
+3. Extract fresh copy from ZIP
+4. Copy to: C:\xampp\htdocs\
+5. Start Apache and MySQL
+6. Run: setup-fixed.bat
+
+
+═══════════════════════════════════════════════════════════════════
+
+CORRECT SETUP ORDER
+═══════════════════════════════════════════════════════════════════
+
+1. Install XAMPP
+2. Extract project files
+3. Copy to C:\xampp\htdocs\ (Apache should be STOPPED)
+4. Start MySQL in XAMPP
+5. Run setup-fixed.bat (this will handle Apache)
+6. Open browser: http://localhost/smart-parking-system/
+
+
+═══════════════════════════════════════════════════════════════════
+
+WHY THIS HAPPENS
+═══════════════════════════════════════════════════════════════════
+
+When Apache is running, it locks the PHP files in the htdocs folder.
+The setup script tries to copy files, but can't because they're locked.
+
+Solution: Stop Apache before copying/setup, then start it again.
+
+
+═══════════════════════════════════════════════════════════════════
+
+VERIFY SETUP WORKED
+═══════════════════════════════════════════════════════════════════
+
+Open: http://localhost/smart-parking-system/test-connection.php
+
+You should see:
+✓ Database connection successful
+✓ All 5 tables exist
+✓ users: 1 row
+✓ parking_slots: 14 rows ← IMPORTANT!
+✓ Admin user found
+
+If parking_slots shows 0 rows:
+→ Database was not imported properly
+→ Run setup-fixed.bat again
+
+
+═══════════════════════════════════════════════════════════════════
+
+QUICK FIX CHECKLIST
+═══════════════════════════════════════════════════════════════════
+
+□ Stop Apache in XAMPP
+□ Keep MySQL running
+□ Run setup-fixed.bat
+□ Wait for "Setup completed successfully!"
+□ Apache should start automatically
+□ Open http://localhost/smart-parking-system/
+□ Check test-connection.php
+
+
+═══════════════════════════════════════════════════════════════════
+
+STILL HAVING ISSUES?
+═══════════════════════════════════════════════════════════════════
+
+1. Stop both Apache and MySQL
+2. Close XAMPP Control Panel
+3. Reopen XAMPP Control Panel
+4. Start MySQL only
+5. Run setup-fixed.bat
+6. Check if Apache started
+7. If not, start Apache manually
+
+
+═══════════════════════════════════════════════════════════════════
